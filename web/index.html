@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Rick and Morty</title>
+  <link rel="manifest" href="manifest.json">
+  <script>
+    // Решение для CORS
+    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      // На продакшене используем прокси
+      window.rickAndMortyApi = 'https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api';
+    } else {
+      window.rickAndMortyApi = 'https://rickandmortyapi.com/api';
+    }
+  </script>
+</head>
+<body>
+  <script src="main.dart.js" type="application/javascript"></script>
+</body>
+</html>
